@@ -24,7 +24,7 @@ document.getElementById("transaction-form").addEventListener("submit", function(
     });
     
     saveData(data);
-    e.target.reset();
+    e.target.reset()
     myModal.hide();
 
     getCashIn();
@@ -49,7 +49,7 @@ function checkLogged () {
     }
 
     const dataUser = localStorage.getItem(logged);
-    if(dataUser){
+    if(dataUser) {
         data = JSON.parse(dataUser);
     }
     
@@ -160,6 +160,6 @@ function getTotal(){
     document.getElementById("total").innerHTML = `R$ ${total.toFixed(2)}`;
 }
 
-function saveData(data){
-    localStorage.setItem(data.login, JSON.stringify(data)
-)};
+function saveData(data) {
+    localStorage.setItem(data.login, JSON.stringify(data));
+}
