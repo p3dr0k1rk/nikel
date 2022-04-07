@@ -70,7 +70,7 @@ function logout(){
 function getCashIn(){
    const transactions = data.transactions;
 
-   const getCashIn= transactions .filter((item) => item.type === "1");
+   const cashIn= transactions .filter((item) => item.type === "1");
        
     if (cashIn.length){
         let cashInHtml = ``;
@@ -91,7 +91,7 @@ function getCashIn(){
                     <div class="container p-0">
                         <div class="row">
                             <div class="col-12 col-md-8">
-                                <p>Aqui vai a descrição...</p> 
+                                <p>${cashIn[index].description}</p>
                             </div>
                              <div class="col-12 col-md-3 d-flex justify-content-end">
                                 ${cashIn[index].date}
@@ -109,10 +109,10 @@ function getCashIn(){
 function getCashOut(){
     const transactions = data.transactions;
  
-    const getCashOut = transactions .filter((item) => item.type === "2");
+    const cashOut = transactions .filter((item) => item.type === "2");
         
      if (cashOut.length){
-         let cashInHtml = ``;
+         let cashOutHtml = ``;
          let limit = 0;
      
  
@@ -130,7 +130,7 @@ function getCashOut(){
                      <div class="container p-0">
                          <div class="row">
                              <div class="col-12 col-md-8">
-                                 <p>Aqui vai a descrição...</p> 
+                                 <p>${cashOut[index].description}</p> 
                              </div>
                               <div class="col-12 col-md-3 d-flex justify-content-end">
                                  ${cashOut[index].date}
